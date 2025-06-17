@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Tu Servicio - Captamos Clientes</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f0f4f8;
+    margin: 0;
+    padding: 0;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh;
+  }
+  .container {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+  }
+  h1 {
+    color: #333;
+  }
+  p {
+    color: #555;
+  }
+  input[type="text"], input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+  }
+  button:hover {
+    background-color: #0056b3;
+  }
+  small {
+    display: block;
+    margin-top: 20px;
+    color: #888;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>¡Conecta con nuevos clientes!</h1>
+    <p>Déjanos tu nombre y correo para que te contactemos y te ayudemos a crecer.</p>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Tu nombre" required />
+      <input type="email" id="email" placeholder="Tu email" required />
+      <button type="submit">Quiero más info</button>
+    </form>
+    <small>Tu información está segura con nosotros.</small>
+  </div>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('¡Gracias! Nos pondremos en contacto contigo pronto.');
+      form.reset();
+    });
+  </script>
+</body>
+</html>
